@@ -505,141 +505,6 @@
 				)
 			)
 		)
-		(symbol "Device:C_Small"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0.254) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 0.254 1.778 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "C_Small"
-				(at 0.254 -2.032 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Unpolarized capacitor, small symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "capacitor cap"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "C_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "C_Small_0_1"
-				(polyline
-					(pts
-						(xy -1.524 -0.508) (xy 1.524 -0.508)
-					)
-					(stroke
-						(width 0.3302)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 0.508) (xy 1.524 0.508)
-					)
-					(stroke
-						(width 0.3048)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "C_Small_1_1"
-				(pin passive line
-					(at 0 2.54 270)
-					(length 2.032)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 2.032)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:Crystal"
 			(pin_numbers hide)
 			(pin_names
@@ -1272,325 +1137,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "EN_Designs-Symbols:PAM8904EGPR"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -7.874 25.4 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "PAM8904EGPR"
-				(at -7.874 23.114 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "QFN40P200X200X80-13N-D"
-				(at 21.59 -87.3 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.diodes.com//assets/Datasheets/PAM8904E.pdf"
-				(at 21.59 -187.3 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "Audio Amplifiers Audio High Volt"
-				(at 0 -3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Name" "Diodes Incorporated"
-				(at 21.59 -687.3 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Part_Number" "PAM8904EGPR"
-				(at 21.59 -787.3 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(symbol "PAM8904EGPR_1_1"
-				(rectangle
-					(start -7.62 20.32)
-					(end 7.62 -20.32)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at -12.7 -2.54 0)
-					(length 5.08)
-					(name "EN1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 17.78 180)
-					(length 5.08)
-					(name "VOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 -12.7 180)
-					(length 5.08)
-					(name "CP2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(name "VIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -12.7 -15.24 0)
-					(length 5.08)
-					(name "EP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -12.7 -8.89 0)
-					(length 5.08)
-					(name "EN2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -12.7 3.81 0)
-					(length 5.08)
-					(name "DIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 -10.16 180)
-					(length 5.08)
-					(name "CN1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -12.7 -17.78 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 -1.27 180)
-					(length 5.08)
-					(name "VO2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 1.27 180)
-					(length 5.08)
-					(name "VO1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 -17.78 180)
-					(length 5.08)
-					(name "CN2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 -5.08 180)
-					(length 5.08)
-					(name "CP1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2961,6 +2507,102 @@
 				)
 			)
 		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+		)
 		(symbol "power:VCC"
 			(power)
 			(pin_numbers hide)
@@ -3131,12 +2773,6 @@
 		(uuid "094ed4ea-eab8-45ce-bf8e-b1c24cc228d2")
 	)
 	(junction
-		(at 90.17 176.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0dd7678d-a499-4f1a-9fbe-fca3d9d8e76c")
-	)
-	(junction
 		(at 182.88 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3165,12 +2801,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2257566b-3159-49a8-8b3b-02265c222241")
-	)
-	(junction
-		(at 115.57 177.8)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "25d0d4ed-945f-427e-a298-2bcee1c9a10d")
 	)
 	(junction
 		(at 36.83 107.95)
@@ -3653,12 +3283,6 @@
 		(uuid "aaa477cc-04f0-4170-b82e-e1532437f62e")
 	)
 	(junction
-		(at 73.66 176.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ab85ccfb-d7f7-48bc-bc71-246bc9bc9f0e")
-	)
-	(junction
 		(at 222.25 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3725,12 +3349,6 @@
 		(uuid "c727fcaa-d5d1-4210-b5d8-7d1fdc359048")
 	)
 	(junction
-		(at 109.22 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cf1f6e89-df84-45a1-bf24-361c2a574c5a")
-	)
-	(junction
 		(at 195.58 60.96)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3759,6 +3377,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dbf690c3-4dbf-4188-9a15-03e7cee7249e")
+	)
+	(junction
+		(at 142.24 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e2659a8a-a418-4962-afeb-c83dcf893b46")
 	)
 	(junction
 		(at 195.58 124.46)
@@ -3834,16 +3458,6 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 175.26) (xy 90.17 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0004b1ca-314e-4d61-9983-5ca8e35bfe91")
-	)
-	(wire
-		(pts
 			(xy 39.37 49.53) (xy 39.37 48.26)
 		)
 		(stroke
@@ -3864,6 +3478,16 @@
 	)
 	(wire
 		(pts
+			(xy 104.14 121.92) (xy 80.01 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00cacca1-8236-4c67-b122-0b217b39a4fe")
+	)
+	(wire
+		(pts
 			(xy 240.03 62.23) (xy 240.03 60.96)
 		)
 		(stroke
@@ -3871,16 +3495,6 @@
 			(type default)
 		)
 		(uuid "0150b3ea-ebc6-42d2-8515-fecce6b2e1d2")
-	)
-	(wire
-		(pts
-			(xy 142.24 177.8) (xy 146.05 177.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0236c5c3-1d0a-4f13-9b2c-dc1676bff6f8")
 	)
 	(wire
 		(pts
@@ -4084,16 +3698,6 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 45.72) (xy 236.22 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09c8dcc1-7c37-4601-a83b-ba38c6005bf0")
-	)
-	(wire
-		(pts
 			(xy 200.66 74.93) (xy 200.66 73.66)
 		)
 		(stroke
@@ -4101,16 +3705,6 @@
 			(type default)
 		)
 		(uuid "0ab55d55-3427-438b-b2de-29a763899f45")
-	)
-	(wire
-		(pts
-			(xy 195.58 45.72) (xy 195.58 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0afa720e-4865-4f97-8d2e-f88cd7b3d7df")
 	)
 	(wire
 		(pts
@@ -4224,23 +3818,13 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 36.83) (xy 224.79 36.83)
+			(xy 222.25 44.45) (xy 224.79 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1142648a-6b7e-49a7-800b-27b712773aad")
-	)
-	(wire
-		(pts
-			(xy 80.01 73.66) (xy 88.9 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11a6ac60-683d-4d90-8f09-fb6f32f9e1b0")
 	)
 	(wire
 		(pts
@@ -4344,16 +3928,6 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 170.18) (xy 146.05 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1502d6e6-35ec-4343-9591-7a4d524d2104")
-	)
-	(wire
-		(pts
 			(xy 262.89 111.76) (xy 262.89 124.46)
 		)
 		(stroke
@@ -4384,16 +3958,6 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 36.83) (xy 182.88 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "16b0ff51-dca6-4147-9bb4-a91eec6f8a10")
-	)
-	(wire
-		(pts
 			(xy 173.99 62.23) (xy 173.99 60.96)
 		)
 		(stroke
@@ -4411,6 +3975,16 @@
 			(type default)
 		)
 		(uuid "181b9a70-80a2-4470-8f32-8e3c8f86414d")
+	)
+	(wire
+		(pts
+			(xy 104.14 119.38) (xy 104.14 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18278700-8749-44ef-a8d7-ba00c9642752")
 	)
 	(wire
 		(pts
@@ -4481,6 +4055,16 @@
 			(type default)
 		)
 		(uuid "1d3a8044-be89-4a66-8fa4-8470b9b12c1e")
+	)
+	(wire
+		(pts
+			(xy 142.24 33.02) (xy 151.13 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1da6e9bc-2e44-4b72-a6c8-0a3e9ce30440")
 	)
 	(wire
 		(pts
@@ -4564,7 +4148,7 @@
 	)
 	(wire
 		(pts
-			(xy 275.59 36.83) (xy 278.13 36.83)
+			(xy 275.59 44.45) (xy 278.13 44.45)
 		)
 		(stroke
 			(width 0)
@@ -4664,13 +4248,13 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 36.83) (xy 209.55 38.1)
+			(xy 142.24 34.29) (xy 142.24 33.02)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2c0f3588-5e86-4350-9f33-e024df24db52")
+		(uuid "2913c8d4-5e7c-4961-8e1e-bab2cb36fffe")
 	)
 	(wire
 		(pts
@@ -4704,7 +4288,7 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 45.72) (xy 209.55 48.26)
+			(xy 209.55 44.45) (xy 209.55 48.26)
 		)
 		(stroke
 			(width 0)
@@ -4854,7 +4438,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 45.72) (xy 182.88 48.26)
+			(xy 182.88 44.45) (xy 182.88 48.26)
 		)
 		(stroke
 			(width 0)
@@ -4901,16 +4485,6 @@
 			(type default)
 		)
 		(uuid "3b6d774d-d2f4-4fc6-b938-9ba421792600")
-	)
-	(wire
-		(pts
-			(xy 73.66 175.26) (xy 73.66 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c1fa306-35d4-40f1-876b-10b4679e7766")
 	)
 	(wire
 		(pts
@@ -5054,23 +4628,13 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 172.72) (xy 146.05 172.72)
+			(xy 80.01 114.3) (xy 104.14 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4a2664c5-87a8-426d-8339-c5662f1e7d35")
-	)
-	(wire
-		(pts
-			(xy 262.89 36.83) (xy 262.89 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4b0e7b0d-9d5b-4aa2-99df-f9bbc6d08689")
+		(uuid "4a118a85-b390-4f44-8b1e-cc6fa9a3db64")
 	)
 	(wire
 		(pts
@@ -5151,6 +4715,16 @@
 			(type default)
 		)
 		(uuid "5054f86e-f733-413d-bff3-93490216b9b5")
+	)
+	(wire
+		(pts
+			(xy 104.14 116.84) (xy 110.49 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5055d90b-80ef-4a16-97a3-56e8ecc57518")
 	)
 	(wire
 		(pts
@@ -5334,16 +4908,6 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 176.53) (xy 97.79 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5c21fefe-9aa0-4110-933b-934026aa0430")
-	)
-	(wire
-		(pts
 			(xy 266.7 125.73) (xy 266.7 124.46)
 		)
 		(stroke
@@ -5444,16 +5008,6 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 175.26) (xy 115.57 177.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "65ba5d92-cff3-4728-8c64-23eb3fc921b0")
-	)
-	(wire
-		(pts
 			(xy 186.69 137.16) (xy 195.58 137.16)
 		)
 		(stroke
@@ -5484,16 +5038,6 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 142.24) (xy 116.84 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "69209e85-f678-4a73-8e39-dd48dfef0c64")
-	)
-	(wire
-		(pts
 			(xy 44.45 104.14) (xy 44.45 107.95)
 		)
 		(stroke
@@ -5504,7 +5048,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 40.64) (xy 142.24 41.91)
+			(xy 142.24 41.91) (xy 142.24 43.18)
 		)
 		(stroke
 			(width 0)
@@ -5594,16 +5138,6 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 138.43) (xy 114.3 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6fc65651-7836-4e8f-a466-1f5fa802cdaf")
-	)
-	(wire
-		(pts
 			(xy 209.55 124.46) (xy 209.55 137.16)
 		)
 		(stroke
@@ -5654,16 +5188,6 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 168.91) (xy 116.84 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "745be8dd-9251-413d-aedd-10a23f57acc4")
-	)
-	(wire
-		(pts
 			(xy 213.36 111.76) (xy 222.25 111.76)
 		)
 		(stroke
@@ -5674,7 +5198,7 @@
 	)
 	(wire
 		(pts
-			(xy 262.89 45.72) (xy 262.89 48.26)
+			(xy 262.89 44.45) (xy 262.89 48.26)
 		)
 		(stroke
 			(width 0)
@@ -5714,7 +5238,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 36.83) (xy 238.76 36.83)
+			(xy 236.22 44.45) (xy 238.76 44.45)
 		)
 		(stroke
 			(width 0)
@@ -5784,16 +5308,6 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 156.21) (xy 105.41 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7a991573-f03a-4cfb-bd8d-b13014aa6c6e")
-	)
-	(wire
-		(pts
 			(xy 209.55 99.06) (xy 209.55 111.76)
 		)
 		(stroke
@@ -5854,16 +5368,6 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 175.26) (xy 115.57 175.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7e687178-e1f5-45ba-b11f-681e3e98a272")
-	)
-	(wire
-		(pts
 			(xy 186.69 124.46) (xy 195.58 124.46)
 		)
 		(stroke
@@ -5894,7 +5398,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 36.83) (xy 248.92 38.1)
+			(xy 248.92 44.45) (xy 248.92 48.26)
 		)
 		(stroke
 			(width 0)
@@ -5954,6 +5458,16 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 119.38) (xy 104.14 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "843491ea-23f3-4aaa-949d-49b152a95790")
+	)
+	(wire
+		(pts
 			(xy 186.69 95.25) (xy 186.69 96.52)
 		)
 		(stroke
@@ -5991,16 +5505,6 @@
 			(type default)
 		)
 		(uuid "860b1064-505a-486b-b2ea-82c26dace1e0")
-	)
-	(wire
-		(pts
-			(xy 73.66 185.42) (xy 73.66 186.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "869820a3-1b7d-4bce-b680-2d6d14b3edd4")
 	)
 	(wire
 		(pts
@@ -6084,7 +5588,7 @@
 	)
 	(wire
 		(pts
-			(xy 275.59 36.83) (xy 275.59 38.1)
+			(xy 275.59 44.45) (xy 275.59 48.26)
 		)
 		(stroke
 			(width 0)
@@ -6131,16 +5635,6 @@
 			(type default)
 		)
 		(uuid "8e4ed615-8149-4de7-bb3e-0fb9b6801b27")
-	)
-	(wire
-		(pts
-			(xy 73.66 166.37) (xy 73.66 167.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f06a986-d6c1-4d55-b664-e8fb8035a3aa")
 	)
 	(wire
 		(pts
@@ -6234,16 +5728,6 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 162.56) (xy 116.84 162.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "95643860-93cd-4bb4-9b43-0e18007cb3ee")
-	)
-	(wire
-		(pts
 			(xy 266.7 146.05) (xy 266.7 147.32)
 		)
 		(stroke
@@ -6261,16 +5745,6 @@
 			(type default)
 		)
 		(uuid "9620336d-b34d-4b74-b323-9bafcc4ba7d3")
-	)
-	(wire
-		(pts
-			(xy 105.41 165.1) (xy 105.41 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "96e91368-d9e3-48c8-a5f0-f48ad1eac83b")
 	)
 	(wire
 		(pts
@@ -6294,7 +5768,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 36.83) (xy 185.42 36.83)
+			(xy 182.88 44.45) (xy 185.42 44.45)
 		)
 		(stroke
 			(width 0)
@@ -6351,26 +5825,6 @@
 			(type default)
 		)
 		(uuid "9c5436d6-8ecf-49ed-a045-a0472d2adec9")
-	)
-	(wire
-		(pts
-			(xy 142.24 165.1) (xy 146.05 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9ca74664-7f2b-4ec0-aaf3-1636bee9a5f2")
-	)
-	(wire
-		(pts
-			(xy 142.24 142.24) (xy 143.51 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9d5b0291-24a5-4cf2-af77-00fadd18e42a")
 	)
 	(wire
 		(pts
@@ -6514,36 +5968,6 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 166.37) (xy 90.17 167.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a462013a-615a-4287-9957-959f7eba7953")
-	)
-	(wire
-		(pts
-			(xy 115.57 177.8) (xy 115.57 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a64ee5dc-53e7-4b37-85b0-0f2b799bc8a2")
-	)
-	(wire
-		(pts
-			(xy 73.66 176.53) (xy 81.28 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a65cb802-1753-4574-93de-69194affe2cd")
-	)
-	(wire
-		(pts
 			(xy 213.36 134.62) (xy 227.33 134.62)
 		)
 		(stroke
@@ -6634,16 +6058,6 @@
 	)
 	(wire
 		(pts
-			(xy 275.59 45.72) (xy 275.59 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad3bc325-ce37-4d3a-99ea-0ce091d4556f")
-	)
-	(wire
-		(pts
 			(xy 200.66 147.32) (xy 213.36 147.32)
 		)
 		(stroke
@@ -6661,16 +6075,6 @@
 			(type default)
 		)
 		(uuid "ad88d08b-063a-4f66-a6a7-0f7fcbb8a1b6")
-	)
-	(wire
-		(pts
-			(xy 248.92 45.72) (xy 248.92 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad9a3efc-cd7b-45fd-891b-b3849ffc5512")
 	)
 	(wire
 		(pts
@@ -6824,7 +6228,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 36.83) (xy 195.58 38.1)
+			(xy 195.58 44.45) (xy 195.58 48.26)
 		)
 		(stroke
 			(width 0)
@@ -6871,6 +6275,16 @@
 			(type default)
 		)
 		(uuid "b7ef1d65-d09c-4b6f-afc1-a33472d70d92")
+	)
+	(wire
+		(pts
+			(xy 151.13 31.75) (xy 151.13 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7f8c851-1b17-4a73-857d-1ac41abea5c8")
 	)
 	(wire
 		(pts
@@ -6941,16 +6355,6 @@
 			(type default)
 		)
 		(uuid "bc9cc8f4-0775-4d2a-b629-cce05b3a04de")
-	)
-	(wire
-		(pts
-			(xy 143.51 142.24) (xy 143.51 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bdb23435-37e9-4a62-b243-7631b8125936")
 	)
 	(wire
 		(pts
@@ -7044,6 +6448,16 @@
 	)
 	(wire
 		(pts
+			(xy 104.14 114.3) (xy 104.14 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3e37bee-7360-4b04-9014-c0df1f6450e2")
+	)
+	(wire
+		(pts
 			(xy 173.99 99.06) (xy 182.88 99.06)
 		)
 		(stroke
@@ -7094,17 +6508,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 138.43) (xy 114.3 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c6c7a017-e0a2-4dac-97d9-178403799994")
-	)
-	(wire
-		(pts
-			(xy 236.22 36.83) (xy 236.22 38.1)
+			(xy 236.22 44.45) (xy 236.22 48.26)
 		)
 		(stroke
 			(width 0)
@@ -7161,16 +6565,6 @@
 			(type default)
 		)
 		(uuid "c91432f9-fb8a-41e0-8a7f-c51202674dda")
-	)
-	(wire
-		(pts
-			(xy 105.41 156.21) (xy 116.84 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c91f7c13-e37d-4fba-8cd5-a52509fbcdcd")
 	)
 	(wire
 		(pts
@@ -7294,23 +6688,13 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 36.83) (xy 198.12 36.83)
+			(xy 195.58 44.45) (xy 198.12 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "cff6ee9e-7420-4f9f-8516-4c4f31550f4b")
-	)
-	(wire
-		(pts
-			(xy 142.24 161.29) (xy 148.59 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0133827-3c80-457f-8b95-e39f89cf5d8e")
 	)
 	(wire
 		(pts
@@ -7394,16 +6778,6 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 176.53) (xy 90.17 177.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d38dfabc-250a-4555-bfef-d2834d6d33e7")
-	)
-	(wire
-		(pts
 			(xy 254 111.76) (xy 262.89 111.76)
 		)
 		(stroke
@@ -7444,7 +6818,7 @@
 	)
 	(wire
 		(pts
-			(xy 262.89 36.83) (xy 265.43 36.83)
+			(xy 262.89 44.45) (xy 265.43 44.45)
 		)
 		(stroke
 			(width 0)
@@ -7501,16 +6875,6 @@
 			(type default)
 		)
 		(uuid "d9c59f3d-6f1a-4a82-8af2-8eb4e08358ae")
-	)
-	(wire
-		(pts
-			(xy 143.51 148.59) (xy 143.51 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "da2fe25b-6d85-4901-8011-e8ecf7fe3fdf")
 	)
 	(wire
 		(pts
@@ -7604,7 +6968,7 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 36.83) (xy 212.09 36.83)
+			(xy 209.55 44.45) (xy 212.09 44.45)
 		)
 		(stroke
 			(width 0)
@@ -7634,7 +6998,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 36.83) (xy 251.46 36.83)
+			(xy 248.92 44.45) (xy 251.46 44.45)
 		)
 		(stroke
 			(width 0)
@@ -7844,16 +7208,6 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 135.89) (xy 109.22 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eac708b8-6475-4105-b63a-7cb7a73392e1")
-	)
-	(wire
-		(pts
 			(xy 67.31 41.91) (xy 67.31 58.42)
 		)
 		(stroke
@@ -7914,7 +7268,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 36.83) (xy 222.25 38.1)
+			(xy 222.25 44.45) (xy 222.25 48.26)
 		)
 		(stroke
 			(width 0)
@@ -7951,16 +7305,6 @@
 			(type default)
 		)
 		(uuid "f0b1cc9a-72a5-46f6-ad6a-bce529b65c3b")
-	)
-	(wire
-		(pts
-			(xy 115.57 177.8) (xy 116.84 177.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f15eb478-7e5a-46de-83a1-17cd6cff0312")
 	)
 	(wire
 		(pts
@@ -8024,16 +7368,6 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 158.75) (xy 148.59 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4f04fc9-ce2a-4636-9e60-3520e5925e0d")
-	)
-	(wire
-		(pts
 			(xy 200.66 113.03) (xy 200.66 111.76)
 		)
 		(stroke
@@ -8094,16 +7428,6 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 176.53) (xy 73.66 177.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f672eaad-9f99-4afd-98c9-6b4fafd2a3a9")
-	)
-	(wire
-		(pts
 			(xy 80.01 81.28) (xy 88.9 81.28)
 		)
 		(stroke
@@ -8111,16 +7435,6 @@
 			(type default)
 		)
 		(uuid "f6804be3-b37b-437e-aa59-af0b4345dd5c")
-	)
-	(wire
-		(pts
-			(xy 90.17 185.42) (xy 90.17 186.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f6d3a650-76b5-4283-9259-906eb206833c")
 	)
 	(wire
 		(pts
@@ -8194,16 +7508,6 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 139.7) (xy 109.22 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f933423e-a28c-4525-98f2-0a04a7591515")
-	)
-	(wire
-		(pts
 			(xy 72.39 41.91) (xy 67.31 41.91)
 		)
 		(stroke
@@ -8231,16 +7535,6 @@
 			(type default)
 		)
 		(uuid "f9a2abe4-8476-4fac-a25c-b7f5e6af8894")
-	)
-	(wire
-		(pts
-			(xy 222.25 45.72) (xy 222.25 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f9de3265-f65d-4f49-bd2b-dcfab697f63a")
 	)
 	(wire
 		(pts
@@ -8314,16 +7608,6 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 144.78) (xy 109.22 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fcabb279-bbed-486a-8a38-156baf8042cf")
-	)
-	(wire
-		(pts
 			(xy 80.01 132.08) (xy 88.9 132.08)
 		)
 		(stroke
@@ -8372,6 +7656,16 @@
 		)
 		(uuid "04fc6566-5983-42ad-8300-4c033b45cf48")
 	)
+	(text "4u / (1 / 8M) = 32"
+		(exclude_from_sim no)
+		(at 37.084 169.672 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "783a1ce5-17fa-435b-b299-3ec07ec17f93")
+	)
 	(label "R5"
 		(at 167.64 109.22 0)
 		(fields_autoplaced yes)
@@ -8394,17 +7688,6 @@
 		)
 		(uuid "1259398f-0c52-42b5-8fea-05e2f6e6e4d2")
 	)
-	(label "C5"
-		(at 238.76 36.83 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "17107eb2-a713-48db-aa4b-0db8d28f2aef")
-	)
 	(label "R6"
 		(at 167.64 121.92 0)
 		(fields_autoplaced yes)
@@ -8416,8 +7699,8 @@
 		)
 		(uuid "199f08c3-4071-47ff-b5eb-9dd370f0205b")
 	)
-	(label "BTN1"
-		(at 88.9 101.6 180)
+	(label "C1"
+		(at 278.13 44.45 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8425,7 +7708,29 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "1e9b6758-5026-4914-809f-dd8a514850b1")
+		(uuid "1b936584-8f73-4047-99b0-22ef396837b8")
+	)
+	(label "C7"
+		(at 198.12 44.45 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1c6b077f-5fce-4f59-9920-91b8ab8d23dc")
+	)
+	(label "C4"
+		(at 238.76 44.45 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1c6cd5a9-38d1-4769-946c-c318905add49")
 	)
 	(label "BTN2"
 		(at 88.9 119.38 180)
@@ -8449,16 +7754,27 @@
 		)
 		(uuid "24b75a93-44b5-4cdd-9dcd-12fc26e87513")
 	)
-	(label "EN1"
-		(at 111.76 162.56 0)
+	(label "C4"
+		(at 88.9 111.76 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "29ffe472-b629-40a3-b4ef-4702191a8f8c")
+		(uuid "2a6dccee-f018-4a35-9e42-6d3e54c6ab1b")
+	)
+	(label "C2"
+		(at 265.43 44.45 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "33a41d8b-b0dc-4fab-8f26-3f0627f1e780")
 	)
 	(label "R1"
 		(at 167.64 58.42 0)
@@ -8471,30 +7787,8 @@
 		)
 		(uuid "35c7d18a-3f04-4431-b732-395f315edc99")
 	)
-	(label "EN1"
-		(at 97.79 176.53 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "37ed495b-4408-43c8-bf26-733735f3a9f5")
-	)
-	(label "C2"
-		(at 198.12 36.83 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3cf4050e-9b42-4967-9bc5-729b78f1e71b")
-	)
 	(label "C7"
-		(at 265.43 36.83 180)
+		(at 88.9 81.28 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8502,7 +7796,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "43c63285-57d6-41d8-9d6a-168b5f219a88")
+		(uuid "43cb086f-ff95-4448-96ce-e44e10c66cd5")
 	)
 	(label "R1"
 		(at 88.9 139.7 180)
@@ -8526,8 +7820,8 @@
 		)
 		(uuid "4f5e1aed-6849-425e-bcaf-9ad251829e72")
 	)
-	(label "EN2"
-		(at 81.28 176.53 180)
+	(label "C8"
+		(at 185.42 44.45 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8535,7 +7829,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "5d3db537-8835-4a02-9449-b66c2467465d")
+		(uuid "56ba62af-128d-4942-92d9-686ea8b6b9cc")
 	)
 	(label "BTN1"
 		(at 119.38 81.28 180)
@@ -8548,8 +7842,8 @@
 		)
 		(uuid "611d32dd-60a6-41f8-b091-d236378802a6")
 	)
-	(label "BUZZER"
-		(at 88.9 73.66 180)
+	(label "C3"
+		(at 251.46 44.45 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8557,7 +7851,18 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "6d2369e1-55b0-405b-bfed-adfbbd9cca6a")
+		(uuid "6534967b-a6f0-48ad-b718-5798adae447b")
+	)
+	(label "C1"
+		(at 88.9 137.16 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6d645f6c-b0aa-4c3a-96b1-a95cc3e4ff89")
 	)
 	(label "BTN2"
 		(at 134.62 81.28 180)
@@ -8592,6 +7897,17 @@
 		)
 		(uuid "73abb011-e4c7-41ce-970b-31df7871d596")
 	)
+	(label "C8"
+		(at 88.9 78.74 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8116a1bc-d96f-41c5-b60d-448cb2b4fb34")
+	)
 	(label "SWCLK"
 		(at 88.9 99.06 180)
 		(fields_autoplaced yes)
@@ -8602,17 +7918,6 @@
 			(justify right bottom)
 		)
 		(uuid "83e54210-843d-4f1b-85c8-8bf584069310")
-	)
-	(label "C8"
-		(at 278.13 36.83 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "8414266f-6ab1-4a2a-a188-f76fbed5694f")
 	)
 	(label "BTN3"
 		(at 149.86 81.28 180)
@@ -8625,6 +7930,17 @@
 		)
 		(uuid "89f1faf1-d2f0-40a6-ac4e-4fae38f32109")
 	)
+	(label "C3"
+		(at 88.9 132.08 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8c9a99c9-addc-45ad-91c0-5c6bdefddae3")
+	)
 	(label "SWDIO"
 		(at 127 40.64 180)
 		(fields_autoplaced yes)
@@ -8635,17 +7951,6 @@
 			(justify right bottom)
 		)
 		(uuid "9312e6dd-4aa4-47dc-97af-03fd4a68c8de")
-	)
-	(label "C7"
-		(at 88.9 134.62 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "97065a09-282e-4385-993b-7ecf1e822825")
 	)
 	(label "R4"
 		(at 167.64 96.52 0)
@@ -8658,6 +7963,17 @@
 		)
 		(uuid "975e4bc0-b620-42cd-85f3-e51a35988efd")
 	)
+	(label "C2"
+		(at 88.9 134.62 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "97ff13f3-d1df-4500-88f6-d828241dc7e8")
+	)
 	(label "R8"
 		(at 88.9 88.9 180)
 		(fields_autoplaced yes)
@@ -8668,6 +7984,17 @@
 			(justify right bottom)
 		)
 		(uuid "9c57413a-aa76-4e15-90fd-856418cf2d2f")
+	)
+	(label "C5"
+		(at 88.9 109.22 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a13e234b-eddf-4716-8b45-d707f2ebd284")
 	)
 	(label "R2"
 		(at 88.9 142.24 180)
@@ -8680,8 +8007,8 @@
 		)
 		(uuid "a5bf5308-f643-408f-8f78-1c97993896fe")
 	)
-	(label "C8"
-		(at 88.9 137.16 180)
+	(label "BTN3"
+		(at 88.9 101.6 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8689,20 +8016,9 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "ac08c5e5-3c91-4e13-b146-ba9d16d95236")
+		(uuid "a9f6f4c7-f561-4205-a627-11512b238d1b")
 	)
-	(label "BUZZER"
-		(at 105.41 156.21 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "acb21528-7500-4d9a-bff1-187f60d8391c")
-	)
-	(label "BTN3"
+	(label "BTN1"
 		(at 41.91 83.82 0)
 		(fields_autoplaced yes)
 		(effects
@@ -8711,18 +8027,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "aed033f8-0821-4ca7-b141-0d14e85fb2c0")
-	)
-	(label "C6"
-		(at 88.9 132.08 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b006103d-6f66-4c76-9416-606056b12cf8")
+		(uuid "b2cd5b4e-104d-4941-b48e-b483916aee02")
 	)
 	(label "R7"
 		(at 41.91 96.52 0)
@@ -8735,8 +8040,8 @@
 		)
 		(uuid "b4bf05ed-0d2e-4dcc-b9a5-01bcd114258e")
 	)
-	(label "C4"
-		(at 88.9 109.22 180)
+	(label "C6"
+		(at 212.09 44.45 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8744,10 +8049,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "be65fe58-eb74-4ac3-bdca-07ab36945712")
+		(uuid "c2431422-7e74-49a9-a9c9-632b1ff265dd")
 	)
-	(label "C1"
-		(at 185.42 36.83 180)
+	(label "C5"
+		(at 224.79 44.45 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8755,18 +8060,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "bf8a7cda-7ece-4d3b-b87d-f56f58c8c38d")
-	)
-	(label "C1"
-		(at 88.9 78.74 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c426d90d-73aa-4a7e-b3a8-23e1f846db66")
+		(uuid "c28d6964-6c40-4adc-93aa-cb551af0086a")
 	)
 	(label "RESET"
 		(at 39.37 48.26 0)
@@ -8823,50 +8117,6 @@
 		)
 		(uuid "e120345e-cb49-4745-85c1-9893e3ef005a")
 	)
-	(label "C3"
-		(at 212.09 36.83 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e23c969b-2c2a-4f5c-a1f1-b3ea116aacfa")
-	)
-	(label "C6"
-		(at 251.46 36.83 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e36abd45-4ce1-4a25-a12d-a793d8708083")
-	)
-	(label "C5"
-		(at 88.9 111.76 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e38d5b7e-2677-49f0-8f50-e36e37897a46")
-	)
-	(label "C4"
-		(at 224.79 36.83 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e3ca77e6-bb9d-4a7e-a4ae-e103ae8de0e7")
-	)
 	(label "R6"
 		(at 41.91 93.98 0)
 		(fields_autoplaced yes)
@@ -8877,17 +8127,6 @@
 			(justify left bottom)
 		)
 		(uuid "ef15a315-f113-43d4-9cb7-9e00000bf221")
-	)
-	(label "C3"
-		(at 88.9 106.68 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f006cf92-f9d4-4805-b466-e7524251a8ef")
 	)
 	(label "SWDIO"
 		(at 88.9 96.52 180)
@@ -8900,19 +8139,8 @@
 		)
 		(uuid "f40eb1db-6b72-4812-a19e-0c66b60a48e1")
 	)
-	(label "EN2"
-		(at 111.76 168.91 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f6bb9cff-ce5b-4d91-8fec-06b15184c112")
-	)
-	(label "C2"
-		(at 88.9 81.28 180)
+	(label "C6"
+		(at 88.9 106.68 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8920,7 +8148,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "f99d3034-bcda-4147-9052-8b935dc74f7b")
+		(uuid "f8675bea-e1cc-4b0b-951d-f479cc4cfcc3")
 	)
 	(label "R4"
 		(at 88.9 83.82 180)
@@ -8961,7 +8189,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 227.33 78.74 0)
 			(effects
 				(font
@@ -8980,6 +8208,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 227.33 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 227.33 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 227.33 78.74 0)
 			(effects
 				(font
@@ -9226,7 +8472,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 266.7 142.24 0)
 			(effects
 				(font
@@ -9253,6 +8499,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C401114"
+			(at 266.7 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
+			(at 266.7 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f8d04df2-1560-43db-a691-d163f66ab3de")
 		)
@@ -9263,71 +8527,6 @@
 			(project "Chirstmas-Card"
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "D62")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 73.66 166.37 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0fbf3499-b55e-4a10-b0f7-85fd1e5ec336")
-		(property "Reference" "#PWR013"
-			(at 73.66 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 73.66 162.814 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 73.66 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 73.66 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 73.66 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "607fda9c-8db2-492a-8d2c-754fc2b089fb")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -9361,7 +8560,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 200.66 129.54 0)
 			(effects
 				(font
@@ -9388,6 +8587,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C401114"
+			(at 200.66 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
+			(at 200.66 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "27e7783f-102f-455e-984a-8f4c05fd54f0")
 		)
@@ -9404,35 +8621,33 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 90.17 171.45 0)
-		(mirror y)
+		(lib_id "power:PWR_FLAG")
+		(at 151.13 31.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "1aa93dfe-8970-4c8c-9d47-9c1e5d5574dc")
-		(property "Reference" "R15"
-			(at 87.63 170.1799 0)
+		(uuid "1c4d84c4-4a56-4961-8d1f-48171b40e98c")
+		(property "Reference" "#FLG01"
+			(at 151.13 29.845 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Value" "0r"
-			(at 87.63 172.7199 0)
+		(property "Value" "PWR_FLAG"
+			(at 151.13 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 91.948 171.45 90)
+		(property "Footprint" ""
+			(at 151.13 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9441,7 +8656,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 90.17 171.45 0)
+			(at 151.13 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9449,25 +8664,22 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 90.17 171.45 0)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 151.13 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "154d22e6-9bb3-46c7-9521-fb6fd189d13e")
 		)
 		(pin "1"
-			(uuid "2466a9b8-0a07-4292-8824-318c07886808")
+			(uuid "8d607996-da6a-4349-8ed7-14c486f0e2ca")
 		)
 		(instances
-			(project "Chirstmas-Card"
+			(project ""
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "R15")
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
@@ -9501,7 +8713,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 254 53.34 0)
 			(effects
 				(font
@@ -9520,6 +8732,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 254 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 254 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 254 53.34 0)
 			(effects
 				(font
@@ -9571,7 +8801,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 266.7 104.14 0)
 			(effects
 				(font
@@ -9598,6 +8828,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C401114"
+			(at 266.7 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
+			(at 266.7 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6e1a320e-0bc4-4da9-89d0-28999b2f01d4")
 		)
@@ -9608,76 +8856,6 @@
 			(project "Chirstmas-Card"
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "D38")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 275.59 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1f6a27e5-365a-4478-b406-40fb3b54922c")
-		(property "Reference" "R8"
-			(at 278.13 40.6399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0"
-			(at 278.13 43.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 273.812 41.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 275.59 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 275.59 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "375fe12c-6d2b-41a5-86de-8b281e0fed61")
-		)
-		(pin "1"
-			(uuid "f316e5f6-cc1d-4b08-bb3e-ec680bc4ea56")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -9730,6 +8908,24 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 26.67 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0402CG150J500NT"
+			(at 26.67 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C1548"
 			(at 26.67 114.3 0)
 			(effects
 				(font
@@ -9808,6 +9004,24 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "KH-6X6X5H-STM"
+			(at 110.49 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C2837531"
+			(at 110.49 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fcf2ad7f-1e20-4caf-93f6-8f110b1aa947")
 		)
@@ -9818,92 +9032,6 @@
 			(project ""
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 143.51 146.05 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2b88f400-fefb-4a2e-b0ee-878cd9df94c9")
-		(property "Reference" "C2"
-			(at 148.082 145.796 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10uF"
-			(at 148.336 148.082 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 143.51 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 143.51 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 143.51 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Voltage" "10V"
-			(at 143.51 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "V" "16V"
-			(at 143.51 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "162b426b-9d85-43ee-9d02-4c824019cd0a")
-		)
-		(pin "1"
-			(uuid "a081339a-c607-41dd-9186-d2e7a8782cb7")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -9937,7 +9065,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 186.69 142.24 0)
 			(effects
 				(font
@@ -9956,6 +9084,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 186.69 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 186.69 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 186.69 142.24 0)
 			(effects
 				(font
@@ -10007,7 +9153,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 200.66 91.44 0)
 			(effects
 				(font
@@ -10026,6 +9172,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 200.66 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 200.66 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 200.66 91.44 0)
 			(effects
 				(font
@@ -10077,7 +9241,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 213.36 129.54 0)
 			(effects
 				(font
@@ -10096,6 +9260,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 213.36 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 213.36 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 213.36 129.54 0)
 			(effects
 				(font
@@ -10147,7 +9329,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 213.36 66.04 0)
 			(effects
 				(font
@@ -10166,6 +9348,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 213.36 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 213.36 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 213.36 66.04 0)
 			(effects
 				(font
@@ -10282,7 +9482,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 186.69 116.84 0)
 			(effects
 				(font
@@ -10301,6 +9501,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 186.69 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 186.69 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 186.69 116.84 0)
 			(effects
 				(font
@@ -10352,7 +9570,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 173.99 66.04 0)
 			(effects
 				(font
@@ -10371,6 +9589,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 173.99 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 173.99 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 173.99 66.04 0)
 			(effects
 				(font
@@ -10448,6 +9684,24 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "CL10A106MA8NRNC"
+			(at 85.09 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C96446"
+			(at 85.09 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "126f4e41-c053-4f47-9473-bf349161a4e1")
 		)
@@ -10458,153 +9712,6 @@
 			(project "Chirstmas-Card"
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "C11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 146.05 167.64 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3c073d92-425f-4ac8-b9d5-4bc8ae237a29")
-		(property "Reference" "C3"
-			(at 150.368 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1uF"
-			(at 150.368 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 146.05 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 146.05 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 146.05 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Voltage" "10V"
-			(at 146.05 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b5ed0807-9e9a-417e-a2d0-13e797adf37e")
-		)
-		(pin "1"
-			(uuid "09e1dfcd-d35f-46a3-a89d-71f1cc846da0")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 182.88 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3db0887e-6523-4e00-a9a0-b5dbb7bf3f4f")
-		(property "Reference" "R1"
-			(at 185.42 40.6399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0"
-			(at 185.42 43.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 181.102 41.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 182.88 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 182.88 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "05d4f2c4-4f5c-436a-b343-1cc0afd51a80")
-		)
-		(pin "1"
-			(uuid "6fca879f-dda4-42de-a250-c4d4ee8bf28f")
-		)
-		(instances
-			(project ""
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -10638,7 +9745,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 173.99 104.14 0)
 			(effects
 				(font
@@ -10657,6 +9764,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 173.99 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 173.99 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 173.99 104.14 0)
 			(effects
 				(font
@@ -10708,7 +9833,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 240.03 66.04 0)
 			(effects
 				(font
@@ -10727,6 +9852,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 240.03 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 240.03 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 240.03 66.04 0)
 			(effects
 				(font
@@ -10778,7 +9921,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 266.7 116.84 0)
 			(effects
 				(font
@@ -10797,6 +9940,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 266.7 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 266.7 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 266.7 116.84 0)
 			(effects
 				(font
@@ -10848,7 +10009,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 227.33 142.24 0)
 			(effects
 				(font
@@ -10875,6 +10036,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C401114"
+			(at 227.33 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
+			(at 227.33 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "139279ad-9fae-4e06-92d7-8b9d46607eef")
 		)
@@ -10885,76 +10064,6 @@
 			(project "Chirstmas-Card"
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "D59")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 195.58 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "521ba661-61ce-43f8-9004-fcd8d0988d80")
-		(property "Reference" "R2"
-			(at 198.12 40.6399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0"
-			(at 198.12 43.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 193.802 41.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 195.58 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 195.58 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "245e2e20-f05b-4a5f-871e-08318e03a492")
-		)
-		(pin "1"
-			(uuid "c8f800cf-f1ee-49f9-a0a0-5f693ff1860e")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -10988,7 +10097,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 213.36 142.24 0)
 			(effects
 				(font
@@ -11015,6 +10124,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C401114"
+			(at 213.36 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
+			(at 213.36 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "13ba192e-9811-408b-bc23-cf175464ce3a")
 		)
@@ -11025,141 +10152,6 @@
 			(project "Chirstmas-Card"
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "D58")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 143.51 149.86 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "58de1f7c-f8c6-49dc-b6be-8676eb7df47a")
-		(property "Reference" "#PWR05"
-			(at 143.51 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 143.51 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 143.51 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 143.51 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 143.51 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7a682775-acb2-4047-9c78-325b1c343471")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 73.66 181.61 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "59a5b22e-99fc-41de-a4a5-55a56e2da5c3")
-		(property "Reference" "R10"
-			(at 71.12 180.3399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0r"
-			(at 71.12 182.8799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 75.438 181.61 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 73.66 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 73.66 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "2fbdda8b-51c7-4230-99df-8ec0a58aa18a")
-		)
-		(pin "1"
-			(uuid "f2163660-2a17-48ec-9027-4dedbe5a2807")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -11193,7 +10185,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 254 66.04 0)
 			(effects
 				(font
@@ -11212,6 +10204,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 254 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 254 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 254 66.04 0)
 			(effects
 				(font
@@ -11329,7 +10339,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 254 129.54 0)
 			(effects
 				(font
@@ -11348,6 +10358,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 254 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 254 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 254 129.54 0)
 			(effects
 				(font
@@ -11399,7 +10427,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 173.99 53.34 0)
 			(effects
 				(font
@@ -11419,6 +10447,24 @@
 		)
 		(property "Description" "Light emitting diode"
 			(at 173.99 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
+			(at 173.99 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 173.99 53.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11599,7 +10645,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 240.03 129.54 0)
 			(effects
 				(font
@@ -11618,6 +10664,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 240.03 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 240.03 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 240.03 129.54 0)
 			(effects
 				(font
@@ -11669,7 +10733,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 254 116.84 0)
 			(effects
 				(font
@@ -11688,6 +10752,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 254 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 254 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 254 116.84 0)
 			(effects
 				(font
@@ -11870,7 +10952,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 254 78.74 0)
 			(effects
 				(font
@@ -11897,6 +10979,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C401114"
+			(at 254 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
+			(at 254 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "49d940b3-b1f4-469e-a565-b6e8b9dbc1b6")
 		)
@@ -11907,71 +11007,6 @@
 			(project "Chirstmas-Card"
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "D21")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 115.57 179.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6e3d468e-4d29-480a-8f9c-795249c95028")
-		(property "Reference" "#PWR07"
-			(at 115.57 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 115.57 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 115.57 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 115.57 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 115.57 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0469b18e-b0d8-4e4f-b686-9dbfa413d93c")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -12043,91 +11078,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 109.22 142.24 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6e93f736-82e2-4d01-b794-5cb1275b5950")
-		(property "Reference" "C1"
-			(at 104.394 141.986 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10uF"
-			(at 104.648 144.272 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 109.22 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 109.22 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 109.22 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Voltage" "10V"
-			(at 109.22 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "V" "16V"
-			(at 109.22 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "2a944fd0-f234-44b0-98b5-765b7e2311bb")
-		)
-		(pin "1"
-			(uuid "b3df94dd-2839-425b-9828-42444b24a0ab")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 254 104.14 90)
 		(unit 1)
@@ -12155,7 +11105,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 254 104.14 0)
 			(effects
 				(font
@@ -12174,6 +11124,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 254 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 254 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 254 104.14 0)
 			(effects
 				(font
@@ -12244,6 +11212,24 @@
 			)
 		)
 		(property "Description" "STMicroelectronics Arm Cortex-M0+ MCU, 32KB flash, 8KB RAM, 64 MHz, 2.0-3.6V, 43 GPIO, LQFP48"
+			(at 64.77 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C529328"
+			(at 64.77 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "STM32G030C6T6"
 			(at 64.77 106.68 0)
 			(effects
 				(font
@@ -12433,7 +11419,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 200.66 53.34 0)
 			(effects
 				(font
@@ -12452,6 +11438,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 200.66 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 200.66 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 200.66 53.34 0)
 			(effects
 				(font
@@ -12541,71 +11545,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 90.17 186.69 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7279707f-ba02-417b-8864-faf194738364")
-		(property "Reference" "#PWR031"
-			(at 90.17 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 90.17 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 90.17 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 90.17 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 90.17 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a7db4d4f-c01a-484d-a3da-779e46668348")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "#PWR031")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 213.36 53.34 90)
 		(unit 1)
@@ -12633,7 +11572,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 213.36 53.34 0)
 			(effects
 				(font
@@ -12652,6 +11591,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 213.36 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 213.36 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 213.36 53.34 0)
 			(effects
 				(font
@@ -12703,7 +11660,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 213.36 91.44 0)
 			(effects
 				(font
@@ -12730,6 +11687,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C401114"
+			(at 213.36 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
+			(at 213.36 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b570fcb2-eb24-419a-80c5-288b79df615e")
 		)
@@ -12740,76 +11715,6 @@
 			(project "Chirstmas-Card"
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "D26")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 248.92 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "75d077bd-7873-44e3-b1cc-76992cf5ea19")
-		(property "Reference" "R6"
-			(at 251.46 40.6399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0"
-			(at 251.46 43.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 247.142 41.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 248.92 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 248.92 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "ecd40de8-0984-4162-9a3d-ad59acdea2bb")
-		)
-		(pin "1"
-			(uuid "10f97eeb-7893-4213-a40a-ff7f182e3f5f")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -12881,141 +11786,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 105.41 166.37 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7e37b33d-6ede-455f-8190-72d82a6cbdae")
-		(property "Reference" "#PWR029"
-			(at 105.41 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 105.41 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 105.41 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 105.41 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 105.41 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d85642ac-26d2-4a5b-ab80-c1c0fd6b160b")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "#PWR029")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 222.25 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7f0cd0aa-5144-4b86-88e8-8e88b5f779a4")
-		(property "Reference" "R4"
-			(at 224.79 40.6399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0"
-			(at 224.79 43.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 220.472 41.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 222.25 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 222.25 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "0dbdaf20-5be8-4354-b3c5-cd01f97312f7")
-		)
-		(pin "1"
-			(uuid "09a29f36-c124-4436-82a8-9932f9e67d23")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 36.83 114.3 0)
 		(unit 1)
@@ -13069,6 +11839,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C1548"
+			(at 36.83 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0402CG150J500NT"
+			(at 36.83 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "47e852e3-5928-4917-8029-609a153c08df")
 		)
@@ -13079,199 +11867,6 @@
 			(project ""
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "C5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "EN_Designs-Symbols:PAM8904EGPR")
-		(at 129.54 160.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "82c0d1ed-bca8-4533-bbbc-44b5926a367f")
-		(property "Reference" "U1"
-			(at 129.54 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PAM8904EGPR"
-			(at 129.54 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EN_Designs-Footprints:QFN50P300X300X100-13N"
-			(at 151.13 247.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.diodes.com//assets/Datasheets/PAM8904E.pdf"
-			(at 151.13 347.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "Audio Amplifiers Audio High Volt"
-			(at 129.54 163.576 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Diodes Incorporated"
-			(at 151.13 847.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "PAM8904EGPR"
-			(at 151.13 947.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "7"
-			(uuid "a710b937-dc02-438c-a0ca-e6523e27e19d")
-		)
-		(pin "11"
-			(uuid "c613eb29-de33-4328-92c5-0a9cf413b33f")
-		)
-		(pin "5"
-			(uuid "cb55fc69-d83f-423e-8e7e-0b3509ef9dd1")
-		)
-		(pin "13"
-			(uuid "bc678d37-18ac-45d6-a6c5-af8cec5c0369")
-		)
-		(pin "6"
-			(uuid "4015f823-e961-4212-bcb0-3d39011304e1")
-		)
-		(pin "10"
-			(uuid "a47e4a65-ddd8-43ce-a808-e4028eecf029")
-		)
-		(pin "3"
-			(uuid "7c321978-5a56-4327-a6a2-e364e1aa7d8d")
-		)
-		(pin "8"
-			(uuid "2d89799c-fab3-4167-9179-8007c5905361")
-		)
-		(pin "2"
-			(uuid "1eb60ff3-0e30-47d9-b82e-e1585332b7b9")
-		)
-		(pin "9"
-			(uuid "e963bf29-8386-4a5f-b59a-bdcde6bb097c")
-		)
-		(pin "1"
-			(uuid "9f69125b-e46b-4102-ad0f-fd47ca9effd0")
-		)
-		(pin "4"
-			(uuid "855f2e0d-f1c2-48d7-b769-1e4db014d36a")
-		)
-		(pin "12"
-			(uuid "48527210-21c8-44de-9c4a-dd0e3f4c3824")
-		)
-		(instances
-			(project ""
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 209.55 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "82c67466-28e9-45ef-961e-cff42bc327fe")
-		(property "Reference" "R3"
-			(at 212.09 40.6399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0"
-			(at 212.09 43.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 207.772 41.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 209.55 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 209.55 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d6772562-83e7-4205-b90c-d8e637fb41fe")
-		)
-		(pin "1"
-			(uuid "5803f7dc-3c13-44b9-b017-64d8cdcc5153")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -13332,6 +11927,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C131394"
+			(at 39.37 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CC0402KRX7R9BB104"
+			(at 39.37 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "75fdaf72-411c-4971-accb-873e6b7776b5")
 		)
@@ -13375,7 +11988,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 186.69 91.44 0)
 			(effects
 				(font
@@ -13402,6 +12015,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C401114"
+			(at 186.69 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
+			(at 186.69 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4ea76ecc-4d51-490b-9190-6667b0a46685")
 		)
@@ -13412,71 +12043,6 @@
 			(project "Chirstmas-Card"
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "D32")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 109.22 135.89 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "87a39fb4-8f99-40b2-8bf3-e58dc7f2cb2e")
-		(property "Reference" "#PWR03"
-			(at 109.22 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 109.22 132.334 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 109.22 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 109.22 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 109.22 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2f982ede-1fa5-45d8-8858-49a062dfda09")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -13510,7 +12076,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 213.36 78.74 0)
 			(effects
 				(font
@@ -13529,6 +12095,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 213.36 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 213.36 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 213.36 78.74 0)
 			(effects
 				(font
@@ -13619,212 +12203,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 73.66 186.69 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9073e56b-b024-42c0-8991-1c50770c5139")
-		(property "Reference" "#PWR014"
-			(at 73.66 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 73.66 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 73.66 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 73.66 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 73.66 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2f4a97c6-1b58-4ee2-8936-5f9dc3e7711f")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "#PWR014")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 73.66 171.45 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(uuid "90dc68e3-179e-4a43-b70e-61b7b7ef3e84")
-		(property "Reference" "R11"
-			(at 71.12 170.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0r"
-			(at 71.12 172.7199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 75.438 171.45 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 73.66 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 73.66 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "7492e1f5-6008-4c7b-9810-0f7e34a65078")
-		)
-		(pin "1"
-			(uuid "0a9bfc42-093a-4792-b4f4-702e6a9b7d10")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "R11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 105.41 161.29 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "91b28b1c-d4d8-4809-abbe-dd4ac191c5ab")
-		(property "Reference" "R14"
-			(at 102.87 160.0199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100k"
-			(at 102.87 162.5599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 107.188 161.29 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 105.41 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 105.41 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "785acc04-2977-41e4-a74a-893408e31a40")
-		)
-		(pin "1"
-			(uuid "7ca71868-04e1-40cb-88ae-dd632e6d12fb")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "R14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 142.24 41.91 0)
+		(at 142.24 43.18 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13833,7 +12212,7 @@
 		(dnp no)
 		(uuid "923524cb-8df4-4f25-8546-e2992791c0a0")
 		(property "Reference" "#PWR028"
-			(at 142.24 48.26 0)
+			(at 142.24 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13842,7 +12221,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 142.24 45.72 0)
+			(at 142.24 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13850,7 +12229,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 142.24 41.91 0)
+			(at 142.24 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13859,7 +12238,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 41.91 0)
+			(at 142.24 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13868,7 +12247,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 142.24 41.91 0)
+			(at 142.24 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14008,6 +12387,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C131394"
+			(at 25.4 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CC0402KRX7R9BB104"
+			(at 25.4 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "02f8c627-7b1d-4ce5-9e7f-0876a61cf5cf")
 		)
@@ -14051,7 +12448,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 240.03 78.74 0)
 			(effects
 				(font
@@ -14070,6 +12467,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 240.03 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 240.03 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 240.03 78.74 0)
 			(effects
 				(font
@@ -14186,7 +12601,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 186.69 66.04 0)
 			(effects
 				(font
@@ -14205,6 +12620,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 186.69 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 186.69 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 186.69 66.04 0)
 			(effects
 				(font
@@ -14256,7 +12689,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 227.33 104.14 0)
 			(effects
 				(font
@@ -14275,6 +12708,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 227.33 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 227.33 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 227.33 104.14 0)
 			(effects
 				(font
@@ -14326,7 +12777,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 266.7 53.34 0)
 			(effects
 				(font
@@ -14345,6 +12796,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 266.7 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 266.7 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 266.7 53.34 0)
 			(effects
 				(font
@@ -14396,7 +12865,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 200.66 142.24 0)
 			(effects
 				(font
@@ -14415,6 +12884,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 200.66 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 200.66 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 200.66 142.24 0)
 			(effects
 				(font
@@ -14493,6 +12980,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C131394"
+			(at 59.69 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CC0402KRX7R9BB104"
+			(at 59.69 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ebbe9d99-77af-49d0-92b3-dca39467d99e")
 		)
@@ -14510,7 +13015,7 @@
 	)
 	(symbol
 		(lib_id "Device:Speaker_Crystal")
-		(at 153.67 158.75 0)
+		(at 115.57 116.84 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14519,7 +13024,7 @@
 		(fields_autoplaced yes)
 		(uuid "a2549984-1316-4589-82bd-9876826cf51a")
 		(property "Reference" "LS1"
-			(at 158.75 158.7499 0)
+			(at 120.65 116.8399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14528,7 +13033,7 @@
 			)
 		)
 		(property "Value" "Speaker_Crystal"
-			(at 158.75 161.2899 0)
+			(at 120.65 119.3799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14538,7 +13043,7 @@
 			)
 		)
 		(property "Footprint" "EN_Designs-Footprints:FUET-1230"
-			(at 152.781 160.02 0)
+			(at 114.681 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14547,7 +13052,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 152.781 160.02 0)
+			(at 114.681 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14556,7 +13061,25 @@
 			)
 		)
 		(property "Description" "Crystal speaker/transducer"
-			(at 153.67 158.75 0)
+			(at 115.57 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "FUET-1230"
+			(at 115.57 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C391037"
+			(at 115.57 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14607,7 +13130,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 213.36 104.14 0)
 			(effects
 				(font
@@ -14634,6 +13157,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C401114"
+			(at 213.36 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
+			(at 213.36 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d25ffb05-be21-45ca-921a-d9351773c001")
 		)
@@ -14651,7 +13192,7 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 142.24 38.1 0)
+		(at 142.24 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14660,7 +13201,7 @@
 		(fields_autoplaced yes)
 		(uuid "abc09a57-d07e-44b6-8829-aeb9cdb3249d")
 		(property "Reference" "BT1"
-			(at 146.05 34.9884 0)
+			(at 146.05 36.2584 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14669,7 +13210,7 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 146.05 37.5284 0)
+			(at 146.05 38.7984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14678,7 +13219,7 @@
 			)
 		)
 		(property "Footprint" "EN_Designs-Footprints:CR2032-BS-6-1"
-			(at 142.24 36.576 90)
+			(at 142.24 37.846 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14687,7 +13228,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 142.24 36.576 90)
+			(at 142.24 37.846 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14696,7 +13237,25 @@
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 142.24 38.1 0)
+			(at 142.24 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CR2032-BS-6-1"
+			(at 142.24 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C70377"
+			(at 142.24 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14747,7 +13306,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 108.712 76.2 90)
 			(effects
 				(font
@@ -14766,6 +13325,24 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 110.49 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0402WGF1003TCE"
+			(at 110.49 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C25741"
 			(at 110.49 76.2 0)
 			(effects
 				(font
@@ -14817,7 +13394,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 240.03 53.34 0)
 			(effects
 				(font
@@ -14836,6 +13413,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 240.03 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 240.03 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 240.03 53.34 0)
 			(effects
 				(font
@@ -14887,7 +13482,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 200.66 104.14 0)
 			(effects
 				(font
@@ -14906,6 +13501,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 200.66 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 200.66 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 200.66 104.14 0)
 			(effects
 				(font
@@ -14957,7 +13570,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 186.69 104.14 0)
 			(effects
 				(font
@@ -14976,6 +13589,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 186.69 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 186.69 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 186.69 104.14 0)
 			(effects
 				(font
@@ -15027,7 +13658,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 200.66 116.84 0)
 			(effects
 				(font
@@ -15046,6 +13677,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 200.66 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 200.66 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 200.66 116.84 0)
 			(effects
 				(font
@@ -15097,7 +13746,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 227.33 91.44 0)
 			(effects
 				(font
@@ -15116,6 +13765,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 227.33 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 227.33 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 227.33 91.44 0)
 			(effects
 				(font
@@ -15167,7 +13834,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 227.33 53.34 0)
 			(effects
 				(font
@@ -15186,6 +13853,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 227.33 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 227.33 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 227.33 53.34 0)
 			(effects
 				(font
@@ -15302,7 +13987,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 240.03 142.24 0)
 			(effects
 				(font
@@ -15321,6 +14006,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 240.03 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 240.03 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 240.03 142.24 0)
 			(effects
 				(font
@@ -15372,7 +14075,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 266.7 66.04 0)
 			(effects
 				(font
@@ -15391,6 +14094,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 266.7 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 266.7 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 266.7 66.04 0)
 			(effects
 				(font
@@ -15442,7 +14163,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 186.69 53.34 0)
 			(effects
 				(font
@@ -15461,6 +14182,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 186.69 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 186.69 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 186.69 53.34 0)
 			(effects
 				(font
@@ -15512,7 +14251,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 227.33 129.54 0)
 			(effects
 				(font
@@ -15531,6 +14270,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 227.33 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 227.33 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 227.33 129.54 0)
 			(effects
 				(font
@@ -15582,7 +14339,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 240.03 116.84 0)
 			(effects
 				(font
@@ -15609,6 +14366,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C401114"
+			(at 240.03 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
+			(at 240.03 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0b654903-45e7-47c7-b70c-19b052e2529d")
 		)
@@ -15619,72 +14394,6 @@
 			(project "Chirstmas-Card"
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "D44")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 109.22 146.05 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ca864613-449d-4195-9abd-4594ac05cc0b")
-		(property "Reference" "#PWR04"
-			(at 109.22 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 109.22 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 109.22 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 109.22 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 109.22 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "05884ccd-efed-4dcc-baf2-88c1a7fb7975")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -15718,7 +14427,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 173.99 129.54 0)
 			(effects
 				(font
@@ -15737,6 +14446,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 173.99 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 173.99 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 173.99 129.54 0)
 			(effects
 				(font
@@ -15788,7 +14515,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 240.03 91.44 0)
 			(effects
 				(font
@@ -15807,6 +14534,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 240.03 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 240.03 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 240.03 91.44 0)
 			(effects
 				(font
@@ -15885,6 +14630,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C2837531"
+			(at 125.73 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "KH-6X6X5H-STM"
+			(at 125.73 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b7c15328-0c4c-47fc-b7fe-8f1c3676b91e")
 		)
@@ -15928,7 +14691,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 139.192 76.2 90)
 			(effects
 				(font
@@ -15947,6 +14710,24 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 140.97 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C25741"
+			(at 140.97 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0402WGF1003TCE"
 			(at 140.97 76.2 0)
 			(effects
 				(font
@@ -16025,6 +14806,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C2837531"
+			(at 140.97 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "KH-6X6X5H-STM"
+			(at 140.97 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "51a6c1f6-1694-42d3-8750-87310e78f043")
 		)
@@ -16068,7 +14867,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 254 142.24 0)
 			(effects
 				(font
@@ -16095,6 +14894,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C401114"
+			(at 254 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
+			(at 254 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f37fd49f-bf47-41af-b5c5-2aab448b6268")
 		)
@@ -16105,83 +14922,6 @@
 			(project "Chirstmas-Card"
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "D61")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 146.05 175.26 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d421a21f-464a-4833-977b-50d279dc5d8d")
-		(property "Reference" "C4"
-			(at 150.368 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1uF"
-			(at 150.368 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 146.05 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 146.05 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 146.05 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Voltage" "10V"
-			(at 146.05 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "3c5b7420-8809-47c3-8f3f-db368e8484ba")
-		)
-		(pin "1"
-			(uuid "3c6a79a8-f5c1-4603-839c-085e3abd10af")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -16215,7 +14955,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 173.99 142.24 0)
 			(effects
 				(font
@@ -16242,6 +14982,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C401114"
+			(at 173.99 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
+			(at 173.99 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "3135b396-f0f2-4c6a-88ae-a1b39dcf182e")
 		)
@@ -16252,76 +15010,6 @@
 			(project "Chirstmas-Card"
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "D63")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 262.89 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d5180385-e3bf-456c-be1f-041af4abce76")
-		(property "Reference" "R7"
-			(at 265.43 40.6399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0"
-			(at 265.43 43.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 261.112 41.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 262.89 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 262.89 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a47f5bbb-5982-41f8-bc17-51310e3d0da4")
-		)
-		(pin "1"
-			(uuid "d3caa573-1a72-48ac-9559-d39347f72cef")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -16355,7 +15043,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 200.66 66.04 0)
 			(effects
 				(font
@@ -16374,6 +15062,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 200.66 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 200.66 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 200.66 66.04 0)
 			(effects
 				(font
@@ -16425,7 +15131,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 186.69 129.54 0)
 			(effects
 				(font
@@ -16444,6 +15150,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 186.69 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 186.69 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 186.69 129.54 0)
 			(effects
 				(font
@@ -16495,7 +15219,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 227.33 66.04 0)
 			(effects
 				(font
@@ -16514,6 +15238,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 227.33 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 227.33 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 227.33 66.04 0)
 			(effects
 				(font
@@ -16630,7 +15372,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 173.99 78.74 0)
 			(effects
 				(font
@@ -16649,6 +15391,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 173.99 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 173.99 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 173.99 78.74 0)
 			(effects
 				(font
@@ -16765,7 +15525,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 266.7 78.74 0)
 			(effects
 				(font
@@ -16784,6 +15544,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 266.7 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 266.7 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 266.7 78.74 0)
 			(effects
 				(font
@@ -16835,7 +15613,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 200.66 78.74 0)
 			(effects
 				(font
@@ -16862,6 +15640,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C401114"
+			(at 200.66 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
+			(at 200.66 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9a2fdb14-2f5f-4043-a312-4a5caabb9701")
 		)
@@ -16872,71 +15668,6 @@
 			(project "Chirstmas-Card"
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "D17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 90.17 166.37 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e1d66aa6-e659-4e04-ac6d-5749d38a103d")
-		(property "Reference" "#PWR030"
-			(at 90.17 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 90.17 162.814 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 90.17 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 90.17 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 90.17 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d651a8f9-c078-41aa-9569-a326da222ce2")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -16970,7 +15701,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 266.7 91.44 0)
 			(effects
 				(font
@@ -16989,6 +15720,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 266.7 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 266.7 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 266.7 91.44 0)
 			(effects
 				(font
@@ -17105,7 +15854,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 254 91.44 0)
 			(effects
 				(font
@@ -17132,6 +15881,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C401114"
+			(at 254 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
+			(at 254 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5ed4c5ec-ddad-4e02-92a1-e280d6355499")
 		)
@@ -17142,76 +15909,6 @@
 			(project "Chirstmas-Card"
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "D29")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 90.17 181.61 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(uuid "e4c9b834-75e7-4de5-939a-8ddf815583ef")
-		(property "Reference" "R16"
-			(at 87.63 180.3399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0r"
-			(at 87.63 182.8799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 91.948 181.61 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 90.17 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 90.17 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "76e926c1-1ebb-49f3-8feb-550b6e4fec6d")
-		)
-		(pin "1"
-			(uuid "faa7add1-bb9e-4156-8cf9-da5c2a6cb1d8")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -17245,7 +15942,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 173.99 116.84 0)
 			(effects
 				(font
@@ -17264,6 +15961,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 173.99 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 173.99 116.84 0)
 			(effects
 				(font
@@ -17406,6 +16121,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C131394"
+			(at 72.39 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CC0402KRX7R9BB104"
+			(at 72.39 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3b66fd5b-5f5d-4f8c-832c-76b87d756f9d")
 		)
@@ -17477,6 +16210,24 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "Q13FC1350000400"
+			(at 36.83 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C32346"
+			(at 36.83 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f64f928c-70b2-4de1-a466-86f2a1c929f5")
 		)
@@ -17520,7 +16271,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 240.03 104.14 0)
 			(effects
 				(font
@@ -17539,6 +16290,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 240.03 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 240.03 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 240.03 104.14 0)
 			(effects
 				(font
@@ -17569,7 +16338,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ef1d2d94-8e73-4722-855f-59c67b587b7c")
 		(property "Reference" "J1"
@@ -17673,7 +16442,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 123.952 76.2 90)
 			(effects
 				(font
@@ -17700,6 +16469,24 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "C25741"
+			(at 125.73 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0402WGF1003TCE"
+			(at 125.73 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9ce974d9-47a3-4a3e-99a4-6119aabb0ebc")
 		)
@@ -17710,76 +16497,6 @@
 			(project "Chirstmas-Card"
 				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
 					(reference "R12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 236.22 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f1b3a69d-28f9-4142-9405-2728a263d9a6")
-		(property "Reference" "R5"
-			(at 238.76 40.6399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0"
-			(at 238.76 43.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 234.442 41.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 236.22 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 236.22 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "acce26d4-b771-4f22-8e77-4cc92a984b74")
-		)
-		(pin "1"
-			(uuid "acfbe8b7-9293-4ff3-9bd3-3b311ffc5775")
-		)
-		(instances
-			(project "Chirstmas-Card"
-				(path "/2e58b86e-68d7-402d-9090-de3d208012c0"
-					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -17813,7 +16530,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 186.69 78.74 0)
 			(effects
 				(font
@@ -17832,6 +16549,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 186.69 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 186.69 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 186.69 78.74 0)
 			(effects
 				(font
@@ -17883,7 +16618,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 227.33 116.84 0)
 			(effects
 				(font
@@ -17902,6 +16637,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 227.33 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 227.33 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 227.33 116.84 0)
 			(effects
 				(font
@@ -17953,7 +16706,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 266.7 129.54 0)
 			(effects
 				(font
@@ -17972,6 +16725,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 266.7 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 266.7 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 266.7 129.54 0)
 			(effects
 				(font
@@ -18023,7 +16794,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 173.99 91.44 0)
 			(effects
 				(font
@@ -18042,6 +16813,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 173.99 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 173.99 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 173.99 91.44 0)
 			(effects
 				(font
@@ -18093,7 +16882,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "EN_Designs-Footprints:MHT151WDT"
 			(at 213.36 116.84 0)
 			(effects
 				(font
@@ -18112,6 +16901,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 213.36 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C401114"
+			(at 213.36 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MHT151WDT"
 			(at 213.36 116.84 0)
 			(effects
 				(font
