@@ -198,10 +198,14 @@ int main(void)
 	//That way the code could automatically tigger for however long is needed for however many tones are needed
 	//That would make it easier to play pre-defined music in an elegant way
 	buzzer_init(&buzzer, &htim1, TIM_CHANNEL_2, TIM_CHANNEL_3, &htim16);
-	buzzer_write(&buzzer, 3000, 1);
-	HAL_Delay(1000);
-	buzzer_write(&buzzer, 3000, 10);
-	HAL_Delay(2000);
+	buzzer_write(&buzzer, 1000, 0);
+	HAL_Delay(1100);
+	buzzer_write(&buzzer, 2000, 0);
+	HAL_Delay(1100);
+	buzzer_write(&buzzer, 3000, 0);
+	HAL_Delay(1100);
+	buzzer_off(&buzzer);
+
 
   /* USER CODE END 2 */
 
@@ -684,11 +688,20 @@ static void MX_GPIO_Init(void)
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 
-
-	//Timer used for turning off buzzer
-	__NOP();
 	if (htim == buzzer.interrupt_timer) {
-		buzzer_interrupt(&buzzer);
+		//move this logic to library?
+		if (buzzer.melody_mode == 1){
+			if (buzzer.melody_index == buzzer.melody_length){
+				buzzer.melody_mode = 0;
+				buzzer_off(&buzzer);
+			}
+			buzzer_write(&buzzer, test_melody[buzzer.melody_index][0], test_melody[buzzer.melody_index][1]);	//should store meldy as part of struct?
+			buzzer.melody_index++;
+		}
+		else {
+			buzzer_off(&buzzer);
+		}
+
 	}
 }
 
