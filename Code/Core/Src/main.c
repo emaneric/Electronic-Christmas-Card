@@ -22,7 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "buzzer.h"
-//#include "display.h"
+#include "display.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -32,7 +32,114 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define NOTE_B0  31
+#define NOTE_C1  33
+#define NOTE_CS1 35
+#define NOTE_D1  37
+#define NOTE_DS1 39
+#define NOTE_E1  41
+#define NOTE_F1  44
+#define NOTE_FS1 46
+#define NOTE_G1  49
+#define NOTE_GS1 52
+#define NOTE_A1  55
+#define NOTE_AS1 58
+#define NOTE_B1  62
+#define NOTE_C2  65
+#define NOTE_CS2 69
+#define NOTE_D2  73
+#define NOTE_DS2 78
+#define NOTE_E2  82
+#define NOTE_F2  87
+#define NOTE_FS2 93
+#define NOTE_G2  98
+#define NOTE_GS2 104
+#define NOTE_A2  110
+#define NOTE_AS2 117
+#define NOTE_B2  123
+#define NOTE_C3  131
+#define NOTE_CS3 139
+#define NOTE_D3  147
+#define NOTE_DS3 156
+#define NOTE_E3  165
+#define NOTE_F3  175
+#define NOTE_FS3 185
+#define NOTE_G3  196
+#define NOTE_GS3 208
+#define NOTE_A3  220
+#define NOTE_AS3 233
+#define NOTE_B3  247
+#define NOTE_C4  262
+#define NOTE_CS4 277
+#define NOTE_D4  294
+#define NOTE_DS4 311
+#define NOTE_E4  330
+#define NOTE_F4  349
+#define NOTE_FS4 370
+#define NOTE_G4  392
+#define NOTE_GS4 415
+#define NOTE_A4  440
+#define NOTE_AS4 466
+#define NOTE_B4  494
+#define NOTE_C5  523
+#define NOTE_CS5 554
+#define NOTE_D5  587
+#define NOTE_DS5 622
+#define NOTE_E5  659
+#define NOTE_F5  698
+#define NOTE_FS5 740
+#define NOTE_G5  784
+#define NOTE_GS5 831
+#define NOTE_A5  880
+#define NOTE_AS5 932
+#define NOTE_B5  988
+#define NOTE_C6  1047
+#define NOTE_CS6 1109
+#define NOTE_D6  1175
+#define NOTE_DS6 1245
+#define NOTE_E6  1319
+#define NOTE_F6  1397
+#define NOTE_FS6 1480
+#define NOTE_G6  1568
+#define NOTE_GS6 1661
+#define NOTE_A6  1760
+#define NOTE_AS6 1865
+#define NOTE_B6  1976
+#define NOTE_C7  2093
+#define NOTE_CS7 2217
+#define NOTE_D7  2349
+#define NOTE_DS7 2489
+#define NOTE_E7  2637
+#define NOTE_F7  2794
+#define NOTE_FS7 2960
+#define NOTE_G7  3136
+#define NOTE_GS7 3322
+#define NOTE_A7  3520
+#define NOTE_AS7 3729
+#define NOTE_B7  3951
+#define NOTE_C8  4186
+#define NOTE_CS8 4435
+#define NOTE_D8  4699
+#define NOTE_DS8 4978
 
+//#define noteSpace 24
+//#define noteSpace2 12
+//#define _16thNote 110
+//#define dotted16th 165
+//#define _8thNote 220
+//#define dotted8th 330
+#define _4thNote 440
+#define dotted4th 660
+#define halfNote 880
+#define dottedHalf 1320
+#define wholeNote 1760
+
+#define noteSpace 12
+#define noteSpace2 6
+#define _16thNote 55
+#define dotted16th 83
+#define _8thNote 110
+#define dotted8th 165
 
 
 /* USER CODE END PD */
@@ -48,6 +155,7 @@ ADC_HandleTypeDef hadc1;
 RTC_HandleTypeDef hrtc;
 
 TIM_HandleTypeDef htim1;
+TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim14;
 TIM_HandleTypeDef htim16;
 
@@ -63,6 +171,7 @@ static void MX_TIM14_Init(void);
 static void MX_TIM16_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_ADC1_Init(void);
+static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
 void writeLED(uint8_t LED, uint8_t state);
 /* USER CODE END PFP */
@@ -75,47 +184,112 @@ uint8_t LED_index = 0;
 
 
 
-static const uint8_t smiley[64] = {
-0, 0, 0, 0, 0, 0, 0, 0,
-0, 0, 1, 0, 0, 1, 0, 0,
-0, 0, 1, 0, 0, 1, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0,
-1, 0, 0, 0, 0, 0, 0, 1,
-0, 1, 1, 1, 1, 1, 1, 0,
-0, 0, 0, 0, 0, 0, 0, 0
-};
+//static const uint8_t smiley[64] = {
+//0, 0, 0, 0, 0, 0, 0, 0,
+//0, 0, 1, 0, 0, 1, 0, 0,
+//0, 0, 1, 0, 0, 1, 0, 0,
+//0, 0, 0, 0, 0, 0, 0, 0,
+//0, 0, 0, 0, 0, 0, 0, 0,
+//1, 0, 0, 0, 0, 0, 0, 1,
+//0, 1, 1, 1, 1, 1, 1, 0,
+//0, 0, 0, 0, 0, 0, 0, 0
+//};
+//
 
-static const uint8_t cross_test[64] = {
-1, 0, 0, 0, 0, 0, 0, 1,
-0, 1, 0, 0, 0, 0, 1, 0,
-0, 0, 1, 0, 0, 1, 0, 0,
-0, 0, 0, 1, 1, 0, 0, 0,
-0, 0, 0, 1, 1, 0, 0, 0,
-0, 0, 1, 0, 0, 1, 0, 0,
-0, 1, 0, 0, 0, 0, 1, 0,
-1, 0, 0, 0, 0, 0, 0, 1
-};
 
-static const uint8_t all_on[64] = {
-1, 1, 1, 1, 1, 1, 1, 1,
-1, 1, 1, 1, 1, 1, 1, 1,
-1, 1, 1, 1, 1, 1, 1, 1,
-1, 1, 1, 1, 1, 1, 1, 1,
-1, 1, 1, 1, 1, 1, 1, 1,
-1, 1, 1, 1, 1, 1, 1, 1,
-1, 1, 1, 1, 1, 1, 1, 1,
-1, 1, 1, 1, 1, 1, 1, 1
+//Easy way to see if data being processed properly
+static const uint32_t rows_test[8] = {
+0xFFFFFFFF,
+0x0,
+0xFFFFFFFF,
+0x0,
+0xFFFFFFFF,
+0x0,
+0xFFFFFFFF,
+0x0,
 };
 
 
 
+//static const uint32_t cross_test[64] = {
+//1, 0, 0, 0, 0, 0, 0, 1,
+//0, 1, 0, 0, 0, 0, 1, 0,
+//0, 0, 1, 0, 0, 1, 0, 0,
+//0, 0, 0, 1, 1, 0, 0, 0,
+//0, 0, 0, 1, 1, 0, 0, 0,
+//0, 0, 1, 0, 0, 1, 0, 0,
+//0, 1, 0, 0, 0, 0, 1, 0,
+//1, 0, 0, 0, 0, 0, 0, 1
+//};
+//
+//static const uint8_t all_on[64] = {
+//1, 1, 1, 1, 1, 1, 1, 1,
+//1, 1, 1, 1, 1, 1, 1, 1,
+//1, 1, 1, 1, 1, 1, 1, 1,
+//1, 1, 1, 1, 1, 1, 1, 1,
+//1, 1, 1, 1, 1, 1, 1, 1,
+//1, 1, 1, 1, 1, 1, 1, 1,
+//1, 1, 1, 1, 1, 1, 1, 1,
+//1, 1, 1, 1, 1, 1, 1, 1
+//};
 
+
+
+
+display_HandleTypeDef display;
 buzzer_HandleTypeDef buzzer;
+//2D array, frequency and duration
 
-uint16_t test_melody[6][2] = { {3000, 10},{3000, 100},{3000, 200},{3000, 500},{3000, 1000} };	//2D array, frequency and duration
+uint16_t darude_bassline[][2] = {
+		{ NOTE_B2, dotted8th }, { 0, dotted8th + noteSpace },
+		{ NOTE_B2, dotted8th }, { 0, dotted8th + noteSpace },
+		{ NOTE_B2, _8thNote }, { 0, _8thNote + noteSpace },
+		{ NOTE_B2, dotted8th}, { 0, dotted8th + noteSpace },
+		{ NOTE_B2, dotted8th}, { 0, dotted8th + noteSpace },
+		{ NOTE_E3, _8thNote }, { 0, _8thNote + noteSpace},
+		{ NOTE_E3, dotted8th }, { 0, dotted8th + noteSpace },
+		{ NOTE_E3, dotted8th }, { 0, dotted8th + noteSpace },
+		{ NOTE_D3, _8thNote }, { 0, _8thNote + noteSpace},
+		{ NOTE_D3, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_D3, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_A2, _8thNote }, { 0, _8thNote + noteSpace},
+		{ NOTE_B2, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_B2, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_B2, _8thNote }, { 0, _8thNote + noteSpace},
+		{ NOTE_B2, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_B2, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_E3, _8thNote }, { 0, _8thNote + noteSpace},
+		{ NOTE_B2, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_B2, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_B2, _8thNote }, { 0, _8thNote + noteSpace},
+		{ NOTE_B2, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_B2, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_D4, _8thNote }, { 0, _8thNote + noteSpace},
+};
+
+uint16_t darude_drop[][2] = {
+		{ NOTE_B4, _16thNote }, { 0, _16thNote + noteSpace2 },
+		{ NOTE_B4, _16thNote }, { 0, _16thNote + noteSpace2 },
+		{ NOTE_B4, _16thNote }, { 0, _16thNote + noteSpace2 },
+		{ NOTE_B4, _16thNote }, { 0, _16thNote + noteSpace2 },
+		{ NOTE_B4, _8thNote}, { 0, _8thNote + noteSpace2 },
+		{ NOTE_B2, _8thNote}, { 0, _8thNote + noteSpace },
+		{ NOTE_B2, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_B2, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_E3, _8thNote }, { 0, _8thNote + noteSpace },
+		{ NOTE_E3, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_E3, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_D3, _8thNote }, { 0, _8thNote + noteSpace},
+		{ NOTE_D3, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_D3, dotted8th }, { 0, dotted8th + noteSpace},
+		{ NOTE_A2, _8thNote }, { 0, _8thNote + noteSpace},
+};
+/*
 
 
+tone(7,nA2,_8thNote);
+delay(_8thNote + noteSpace);
+*/
 
 
 
@@ -155,6 +329,7 @@ int main(void)
   MX_TIM16_Init();
   MX_TIM1_Init();
   MX_ADC1_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
   HAL_GPIO_WritePin(R0_GPIO_Port, R0_Pin, 1);
   HAL_GPIO_WritePin(R1_GPIO_Port, R1_Pin, 1);
@@ -180,31 +355,27 @@ int main(void)
 	// Start the conversion sequence
 	HAL_ADC_Start(&hadc1);
 	HAL_ADC_PollForConversion(&hadc1, 0xFFFF);
-	uint32_t vrefint_raw = HAL_ADC_GetValue(&hadc1);
+	//uint32_t vrefint_raw = HAL_ADC_GetValue(&hadc1);
 
 	/*
 	 * This macro calculates the vdda voltage (as a uint32_t representing the voltage in milliVolts)
 	 * using the vref internal raw adc value, and the internal calibration value in ROM
 	 */
-	uint32_t vdda_voltage = __HAL_ADC_CALC_VREFANALOG_VOLTAGE(vrefint_raw, ADC_RESOLUTION_12B);
-	__NOP();
+//	uint32_t vdda_voltage = __HAL_ADC_CALC_VREFANALOG_VOLTAGE(vrefint_raw, ADC_RESOLUTION_12B);
+//	__NOP();
 
 
-	uint8_t btn1_val = 0;
+	display_init(&display, &htim3, TIM_CHANNEL_1,  &htim14, TIM_CHANNEL_1);
 
 
 
-	//I think I should add functionality to setup a queue of buzzer tones.
-	//That way the code could automatically tigger for however long is needed for however many tones are needed
-	//That would make it easier to play pre-defined music in an elegant way
-	buzzer_init(&buzzer, &htim1, TIM_CHANNEL_2, TIM_CHANNEL_3, &htim16);
-	buzzer_write(&buzzer, 1000, 0);
-	HAL_Delay(1100);
-	buzzer_write(&buzzer, 2000, 0);
-	HAL_Delay(1100);
-	buzzer_write(&buzzer, 3000, 0);
-	HAL_Delay(1100);
-	buzzer_off(&buzzer);
+
+//	buzzer_init(&buzzer, &htim1, TIM_CHANNEL_2, TIM_CHANNEL_3, &htim16);
+//	buzzer.melody = darude_drop;
+//	buzzer.melody_length = sizeof(darude_drop) / sizeof(darude_drop[0]);
+//	buzzer_play_melody(&buzzer, 2);
+	//Working pretty well, but there is a time delay between loops of a melody, Need to figure out why
+	//Maybe record audio of correct loop and compare to bad loop to see difference
 
 
   /* USER CODE END 2 */
@@ -533,6 +704,64 @@ static void MX_TIM1_Init(void)
 }
 
 /**
+  * @brief TIM3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM3_Init(void)
+{
+
+  /* USER CODE BEGIN TIM3_Init 0 */
+
+  /* USER CODE END TIM3_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+
+  /* USER CODE BEGIN TIM3_Init 1 */
+
+  /* USER CODE END TIM3_Init 1 */
+  htim3.Instance = TIM3;
+  htim3.Init.Prescaler = 16 - 1;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim3.Init.Period = 41 - 1;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim3, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_OC_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.OCMode = TIM_OCMODE_TIMING;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_OC_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM3_Init 2 */
+
+  /* USER CODE END TIM3_Init 2 */
+
+}
+
+/**
   * @brief TIM14 Initialization Function
   * @param None
   * @retval None
@@ -550,31 +779,30 @@ static void MX_TIM14_Init(void)
 
   /* USER CODE END TIM14_Init 1 */
   htim14.Instance = TIM14;
-  htim14.Init.Prescaler = 0;
+  htim14.Init.Prescaler = 1600 - 1;
   htim14.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim14.Init.Period = 65535;
+  htim14.Init.Period = 416 - 1;
   htim14.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim14.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim14) != HAL_OK)
   {
     Error_Handler();
   }
-  if (HAL_TIM_PWM_Init(&htim14) != HAL_OK)
+  if (HAL_TIM_OC_Init(&htim14) != HAL_OK)
   {
     Error_Handler();
   }
-  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.OCMode = TIM_OCMODE_TIMING;
   sConfigOC.Pulse = 0;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
-  if (HAL_TIM_PWM_ConfigChannel(&htim14, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  if (HAL_TIM_OC_ConfigChannel(&htim14, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
   {
     Error_Handler();
   }
   /* USER CODE BEGIN TIM14_Init 2 */
 
   /* USER CODE END TIM14_Init 2 */
-  HAL_TIM_MspPostInit(&htim14);
 
 }
 
@@ -689,20 +917,16 @@ static void MX_GPIO_Init(void)
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 
 	if (htim == buzzer.interrupt_timer) {
-		//move this logic to library?
-		if (buzzer.melody_mode == 1){
-			if (buzzer.melody_index == buzzer.melody_length){
-				buzzer.melody_mode = 0;
-				buzzer_off(&buzzer);
-			}
-			buzzer_write(&buzzer, test_melody[buzzer.melody_index][0], test_melody[buzzer.melody_index][1]);	//should store meldy as part of struct?
-			buzzer.melody_index++;
-		}
-		else {
-			buzzer_off(&buzzer);
-		}
-
+		buzzer_interrupt(&buzzer);
 	}
+
+	else if (htim == display.frame_timer){
+		frame_interrupt(&display);
+	}
+
+//	else if (htim == display.multiplex_timer){
+//		multiplex_interrupt(&display);
+//	}
 }
 
 
