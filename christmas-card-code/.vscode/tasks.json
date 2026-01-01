@@ -1,0 +1,27 @@
+{
+    "tasks": [
+        {
+            "label": "Flash STM32 (CubeProgrammer)",
+            "type": "shell",
+            "command": "/home/ericnavarrete/.local/share/stm32cube/bundles/programmer/2.21.0/bin/STM32_Programmer_CLI",
+            "args": [
+                "-c",
+                "port=SWD",
+                "-w",
+                "${workspaceFolder}/build/Debug/christmas-card-code.elf",
+                "-v"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

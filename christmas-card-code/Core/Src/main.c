@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "buzzer.h"
+#include "cmsis_gcc.h"
 #include "display.h"
 #include <stdio.h>
 #include <string.h>
@@ -781,6 +782,8 @@ static void MX_GPIO_Init(void)
 
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+
+  __NOP();
 
 	if (htim == buzzer.interrupt_timer) {
 		//buzzer_interrupt(&buzzer);
