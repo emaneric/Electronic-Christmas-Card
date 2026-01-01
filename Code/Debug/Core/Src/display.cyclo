@@ -1,5 +1,0 @@
-../Core/Src/display.c:12:6:display_init	1
-../Core/Src/display.c:21:6:update_pixels	1
-../Core/Src/display.c:31:6:display_start	1
-../Core/Src/display.c:43:6:display_stop	1
-../Core/Src/display.c:48:6:frame_interrupt	1
