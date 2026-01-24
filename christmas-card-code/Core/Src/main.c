@@ -183,14 +183,17 @@ static void MX_TIM16_Init(void);
 void generate_BSRR_array(uint8_t pixel_values[8],
                          volatile uint32_t BSRR_row_array[64],
                          volatile uint32_t BSRR_column_array[64]);
+uint32_t update_frame_duration_ms(uint8_t index);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
 volatile uint8_t pixel_index = 0;
+volatile uint8_t previous_pixel_index = 0;
 volatile uint32_t test_row_array[64] = {0};
 volatile uint32_t test_column_array[64] = {0};
+uint32_t last_frame_duration_ms = 0;
 
 // Easy way to see if data being processed properly
 static uint8_t test_image1[8] = {
@@ -266,10 +269,6 @@ int main(void)
    */
   uint32_t vdda_voltage =
       __HAL_ADC_CALC_VREFANALOG_VOLTAGE(vrefint_raw, ADC_RESOLUTION_12B);
-  uint32_t frame_start_ms = 0;
-  uint32_t frame_end_ms = 0;
-  uint32_t frame_duration_ms = 0;
-  __NOP();
 
   generate_BSRR_array(test_image1, test_row_array, test_column_array);
 
@@ -279,40 +278,8 @@ int main(void)
   Frame rate is: 1s / 16.64ms = 60.09.
   */
 
-  uint8_t error = 0;
-
-  if (HAL_TIM_Base_Start_IT(&htim3) != HAL_OK) {
-    error = 1;
-  }
-
-  if (HAL_DMA_Start_IT(&hdma_tim3_ch1, (uint32_t)test_row_array,
-                    (uint32_t)&GPIOB->BSRR, 64) != HAL_OK) {
-    error = 1;
-  }
-
-  if (HAL_DMA_Start_IT(&hdma_tim3_ch2, (uint32_t)test_column_array,
-                    (uint32_t)&GPIOA->BSRR, 64) != HAL_OK) {
-    error = 1;
-  }
-
-  __HAL_TIM_ENABLE_DMA(&htim3, TIM_DMA_CC1);
-  __HAL_TIM_ENABLE_DMA(&htim3, TIM_DMA_CC2);
-
-  if (HAL_TIM_OC_Start(&htim3, TIM_CHANNEL_1) != HAL_OK){
-    error = 1;
-  }
-  if (HAL_TIM_OC_Start(&htim3, TIM_CHANNEL_2) != HAL_OK){
-    error = 1;
-  }
-
-  if (error != 0){
-    __NOP();
-  }
-  __NOP();
-
-  // Force a software DMA request for Channel 1
-  // HAL_TIM_GenerateEvent(&htim3, TIM_EVENTSOURCE_CC1);
-  //__NOP();
+  
+  
 
   /* USER CODE END 2 */
 
@@ -320,19 +287,13 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1) {
 
-    // Record the start and end tick value to calculate how long a single frame
-    // was displayed
-    if (pixel_index == 0) {
-      frame_start_ms = HAL_GetTick();
+    //Call function to update frame duration if the index has changed
+    if (previous_pixel_index != pixel_index){
+      last_frame_duration_ms = update_frame_duration_ms(pixel_index);
     }
-
-    else if (pixel_index == 63) {
-      frame_end_ms = HAL_GetTick();
-      frame_duration_ms = frame_end_ms - frame_start_ms;
-      __NOP();
-    }
-
     __NOP();
+
+    
 
     //	  GPIOB->BSRR = test_row_array[pixel_index];
     //	  GPIOA->BSRR = test_column_array[pixel_index];
@@ -914,6 +875,44 @@ void generate_BSRR_array(uint8_t pixel_values[8],
     }
   }
 }
+
+
+/**
+ * @brief Calculate the frame duration by recording the system ticks at the first LED index and last LED index.
+ * Returns uint32_t containing the duration of the most recently completed frame in ms.
+ * @param index 
+ * @return uint32_t 
+ */
+uint32_t update_frame_duration_ms(uint8_t index){    
+  
+  static uint32_t frame_start_ms = 0;
+  static uint32_t frame_end_ms = 0;
+  static uint32_t frame_duration_ms = 0;
+
+  if (index == 0) {
+    frame_start_ms = HAL_GetTick();
+  }
+
+  else if (index == 63) {
+    frame_end_ms = HAL_GetTick();
+    frame_duration_ms = frame_end_ms - frame_start_ms;
+  }
+  
+  return frame_duration_ms;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* USER CODE END 4 */
 
