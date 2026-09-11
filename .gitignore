@@ -50,3 +50,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# VS Code Local History extension (contains a stray nested .git)
+.history/
