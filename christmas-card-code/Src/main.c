@@ -1,17 +1,27 @@
 #include "main.h"
 #include "stm32g030xx.h"
 
-extern volatile uint32_t tick_ms;
-static volatile uint16_t row_frame[64] = {0};
-static volatile uint16_t col_frame[64] = {0};
-static volatile uint8_t pixel_index = 0;
+#define PIXEL_TIMER_PERIOD_US 80
+#define REFRESHES_PER_FRAME 16   // 16 x 5.12 ms refresh -> ~12 FPS
 
+extern volatile uint32_t tick_ms;
+
+// Row and column masks live in one struct so a single pointer publishes both.
+typedef struct {
+  uint16_t row[64];
+  uint16_t col[64];
+} frame_t;
+
+static frame_t frames[2];
+static frame_t * volatile active_frame = &frames[0];  // the ISR scans this one
+
+static volatile uint8_t new_frame_flag = 0;
 
 static const uint8_t test_image1[8] = {
   0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00,
 };
 
-static const uint8_t animation[24][8] = {
+static const uint8_t dot_frames[][8] = {
   { 0xC0, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 },  //  0: (x=0, y=0)
   { 0x60, 0x60, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 },  //  1: (x=1, y=0)
   { 0x30, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 },  //  2: (x=2, y=0)
@@ -38,9 +48,67 @@ static const uint8_t animation[24][8] = {
   { 0x00, 0xC0, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00 },  // 23: (x=0, y=1)
 };
 
+// A short original silhouette loop: a figure dancing in place.
+// The six poses it cycles through (MSB of each byte = column 0):
+//
+//   arms_down  arms_out  arms_up   hop       lean_left  lean_right
+//   ...##...  ...##...  .#....#.  ........  ..##....  ....##..
+//   ...##...  ...##...  .#.##.#.  ...##...  ..##....  ....##..
+//   ..####..  .######.  ..####..  ...##...  ####....  ....####
+//   .#.##.#.  ...##...  ...##...  .######.  ..##....  ....##..
+//   .#.##.#.  ...##...  ...##...  ...##...  ..###...  ...###..
+//   ...##...  ...##...  ...##...  ...##...  ...##...  ...##...
+//   ..#..#..  ..#..#..  ..#..#..  ...##...  ..#..#..  ..#..#..
+//   .#....#.  .#....#.  .#....#.  ..#..#..  .#....#.  .#....#.
+static const uint8_t dancer_frames[][8] = {
+  { 0x18, 0x18, 0x3C, 0x5A, 0x5A, 0x18, 0x24, 0x42 },  //  0 arms_down
+  { 0x18, 0x18, 0x7E, 0x18, 0x18, 0x18, 0x24, 0x42 },  //  1 arms_out
+  { 0x42, 0x5A, 0x3C, 0x18, 0x18, 0x18, 0x24, 0x42 },  //  2 arms_up
+  { 0x18, 0x18, 0x7E, 0x18, 0x18, 0x18, 0x24, 0x42 },  //  3 arms_out
+  { 0x18, 0x18, 0x3C, 0x5A, 0x5A, 0x18, 0x24, 0x42 },  //  4 arms_down
+  { 0x18, 0x18, 0x7E, 0x18, 0x18, 0x18, 0x24, 0x42 },  //  5 arms_out
+  { 0x42, 0x5A, 0x3C, 0x18, 0x18, 0x18, 0x24, 0x42 },  //  6 arms_up
+  { 0x18, 0x18, 0x7E, 0x18, 0x18, 0x18, 0x24, 0x42 },  //  7 arms_out
+  { 0x30, 0x30, 0xF0, 0x30, 0x38, 0x18, 0x24, 0x42 },  //  8 lean_left
+  { 0x18, 0x18, 0x7E, 0x18, 0x18, 0x18, 0x24, 0x42 },  //  9 arms_out
+  { 0x0C, 0x0C, 0x0F, 0x0C, 0x1C, 0x18, 0x24, 0x42 },  // 10 lean_right
+  { 0x18, 0x18, 0x7E, 0x18, 0x18, 0x18, 0x24, 0x42 },  // 11 arms_out
+  { 0x00, 0x18, 0x18, 0x7E, 0x18, 0x18, 0x18, 0x24 },  // 12 hop
+  { 0x42, 0x5A, 0x3C, 0x18, 0x18, 0x18, 0x24, 0x42 },  // 13 arms_up
+  { 0x00, 0x18, 0x18, 0x7E, 0x18, 0x18, 0x18, 0x24 },  // 14 hop
+  { 0x18, 0x18, 0x7E, 0x18, 0x18, 0x18, 0x24, 0x42 },  // 15 arms_out
+};
+
+// An animation is a frame array plus its length, so clips of any size can be
+// swapped in without touching the playback loop.
+typedef struct {
+  const uint8_t (*frames)[8];
+  uint16_t count;
+} animation_t;
+
+#define ANIMATION(a) { (a), (uint16_t)(sizeof(a) / sizeof((a)[0])) }
+
+enum { CLIP_DANCER, CLIP_BOUNCING_DOT, CLIP_COUNT };
+
+static const animation_t clips[CLIP_COUNT] = {
+  [CLIP_DANCER]       = ANIMATION(dancer_frames),
+  [CLIP_BOUNCING_DOT] = ANIMATION(dot_frames),
+};
+
+static const animation_t *current_anim = &clips[CLIP_BOUNCING_DOT];
+
+
+
+
+
 
 void delay_ms(uint32_t ms);
-static void generate_ODR_arrays(const uint8_t pixel_values[8]);
+static void generate_ODR_arrays(frame_t *dest, const uint8_t pixel_values[8]);
+
+
+
+
+
 
 int main(void)
 {  
@@ -62,42 +130,42 @@ int main(void)
   RCC->APBENR1 |= RCC_APBENR1_TIM3EN;
   (void)RCC->APBENR1;
   TIM3->PSC = 160 - 1;        // 16 MHz / 160 = 100 kHz -> 10 us per count
-  TIM3->ARR = 8 - 1;          // 8 counts -> 80 us per LED, 64 LEDs -> 5.12 ms/frame
+  TIM3->ARR = (PIXEL_TIMER_PERIOD_US / 10) - 1; // 8 counts -> 80 us per LED
   TIM3->CR1 = TIM_CR1_URS;    // only overflow generates update events
   TIM3->EGR = TIM_EGR_UG;     // load PSC/ARR into the shadow registers now
   TIM3->SR = ~TIM_SR_UIF;     // clear the flag UG just set
   TIM3->DIER = TIM_DIER_UIE;  // update interrupt: the CPU drives the pins
   NVIC_EnableIRQ(TIM3_IRQn);
 
-  // The DMA cannot be used here: on the STM32G0x0 the GPIO ports sit on the
-  // Cortex-M0+ IOPORT bus, which is reachable by the core only. The bus matrix
-  // slaves are SRAM, flash and the AHB-to-APB bridge (RM0454 section 2.1), so a
-  // DMA write to GPIOx->ODR faults instead of driving the pins.
-
-  generate_ODR_arrays(test_image1);
+  generate_ODR_arrays(&frames[0], test_image1);
 
   TIM3->CR1 |= TIM_CR1_CEN;   // start the scan
 
 
 
+  frame_t *back_frame = &frames[1];
+
   while (1)
   {
-    static uint8_t frame_index = 0;
-    generate_ODR_arrays(animation[frame_index]);
-    delay_ms(40);
-    frame_index++;
-    if (frame_index == 24){
-      frame_index = 0;
-    }
+    static uint16_t frame_index = 0;
 
-    //__NOP();
-    // //LED ON = PA0 high PB0 low
-    // GPIOA->BSRR = 1u<<0;
-    // GPIOB->BSRR = 0b11111110 | 1u<<16;
-    // delay_ms(1000);
-    // //LED OFF = PA0 low PB0 low
-    // GPIOA->BSRR = 1u<<16;
-    // delay_ms(1000);
+    if (new_frame_flag){
+      new_frame_flag = 0;
+
+      generate_ODR_arrays(back_frame, current_anim->frames[frame_index]);
+
+      // Publish the finished buffer. The pointer store is a single aligned word,
+      // so the ISR sees either the whole old frame or the whole new one.
+      __DMB();
+      frame_t *retired = active_frame;
+      active_frame = back_frame;
+      back_frame = retired;
+
+      frame_index++;
+      if (frame_index >= current_anim->count){
+        frame_index = 0;
+      }
+    }
   }
 }
 
@@ -116,19 +184,30 @@ void TIM3_IRQHandler(void)
 {
   TIM3->SR = ~TIM_SR_UIF;
 
+  static uint8_t pixel_index = 0;
   uint8_t i = pixel_index;
+  frame_t *f = active_frame;      // read once: both masks come from one frame
 
   GPIOA->ODR = 0;                 // blank the anodes before switching rows
-  GPIOB->ODR = row_frame[i];
-  GPIOA->ODR = col_frame[i];
+  GPIOB->ODR = f->row[i];
+  GPIOA->ODR = f->col[i];
 
   pixel_index = (i + 1) & 63u;
+
+  if (pixel_index == 0){            // a full 64-LED refresh just finished
+    static uint8_t refresh_count = 0;
+    refresh_count++;
+    if (refresh_count == REFRESHES_PER_FRAME){
+      refresh_count = 0;
+      new_frame_flag = 1;
+    }
+  }
 }
 
 // Rows are the LED cathodes on PB0-PB7, active low.
 // Columns are the LED anodes on PA0-PA7, active high.
 // MSB of each pixel_values byte is column 0.
-static void generate_ODR_arrays(const uint8_t pixel_values[8])
+static void generate_ODR_arrays(frame_t *dest, const uint8_t pixel_values[8])
 {
   for (uint8_t row = 0; row < 8; row++)
   {
@@ -138,13 +217,13 @@ static void generate_ODR_arrays(const uint8_t pixel_values[8])
 
       if ((pixel_values[row] >> (7 - col)) & 1)
       {
-        row_frame[i] = 0xFFu & ~(1u << row);   // pull only this cathode low
-        col_frame[i] = 1u << col;              // drive only this anode high
+        dest->row[i] = 0xFFu & ~(1u << row);   // pull only this cathode low
+        dest->col[i] = 1u << col;              // drive only this anode high
       }
       else
       {
-        row_frame[i] = 0xFFu;                  // all cathodes high
-        col_frame[i] = 0x00u;                  // all anodes low
+        dest->row[i] = 0xFFu;                  // all cathodes high
+        dest->col[i] = 0x00u;                  // all anodes low
       }
     }
   }
